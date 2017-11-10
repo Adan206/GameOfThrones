@@ -1,0 +1,66 @@
+<nav>
+  <div class="logo">
+    <img src="http://www.ommegang.com/got/img/got-logo-tbs.png" alt="">
+  </div>
+</nav>
+
+<div class="cover">
+<div class="container">
+<div style="text-align:center">
+  <h1 id="title">
+   {{title}}!
+  </h1>
+  <i class="fa fa-hand-o-right" size="3x" animation="spin" aria-hidden="false"></i>
+  <input type="text" [(ngModel)]="filteredName"><br>
+  <div class="panel panel-primary" *ngFor="let house of data | filter:filteredName: 'name'">
+    <div class="panel-heading"><h4><strong>Name: </strong></h4><span>{{house.name}}</span></div>
+     <ul class="list-group">
+       <li class="list-group-item"><h4><strong>Region: </strong></h4>
+         <p class="list-group-item-text"><span>{{house.region}}</span></p>
+       </li>
+
+       <li class="list-group-item"><h4><strong>Words: </strong></h4>
+         <p class="list-group-item-text"><span>{{house.words}}</span></p>
+         </li>
+
+       <li class="list-group-item">
+         <h4 class="list-group-item-heading"><strong>Coat Of Arms</strong></h4>
+         <p class="list-group-item-text"><span>{{house.coatOfArms}}</span></p>
+       </li>
+
+     </ul>
+    <div class="panel-footer">
+      <a href="http://gameofthrones.wikia.com/wiki/Category:Noble_houses">More-Info</a>
+    </div>
+  </div>
+
+
+  <!-- <div class="list-group" *ngFor="let house of data">
+    <a href="#!" class="list-group-item active"><strong>Name: </strong> {{ house.name}} </a>
+    <a href="#!" class="list-group-item list-group-item-action"><strong> Region:</strong><span> {{house.region}}</span></a>
+    <a href="#!" class="list-group-item list-group-item-action"><strong>Coat Of Arms:</strong><span> {{house.coatOfArms}}</span></a>
+    <a href="#!" class="list-group-item list-group-item-action"><strong>Words:</strong><span> {{house.words}}</span></a>
+
+  </div> -->
+
+
+
+  <!-- <dl *ngFor="let house of data">
+    <dt><strong>Name: </strong></dt>
+    <dd><span>{{house.name}}</span></dd>
+    <dt><strong>Region: </strong></dt>
+    <dd><span>{{house.region}}</span></dd>
+    <dt><strong>Words: </strong></dt>
+    <dd><span>{{house.words}}</span></dd>
+    <dt><strong>Coat Of Arms</strong></dt>
+    <dd><span>{{house.coatOfArms}}</span></dd>
+  </dl> -->
+
+
+
+
+
+
+</div>
+</div>
+</div>
